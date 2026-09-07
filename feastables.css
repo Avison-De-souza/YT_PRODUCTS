@@ -1,0 +1,128 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(180deg, #f8f8f8, #ffffff);
+  color: #000;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #63c4ee;
+  padding: 15px 60px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo img {
+  height: 45px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff3c3c;
+}
+
+/* Grid */
+.pro {
+  display: inline-block;
+  margin: 25px;
+}
+
+/* PRODUCT CARD */
+.product {
+  background: #63c4ee;
+  width: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* HOVER EFFECT  */
+.product:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* PRODUCT IMAGE */
+.img {
+  background: #fff;
+  padding: 18px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.35s ease-in-out;
+}
+
+/* hover */
+.product:hover img {
+  transform: scale(1.1);
+}
+
+/* PRODUCT TEXT */
+.text {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ADD MORE BUTTON*/
+#addMoreBtn {
+  padding: 12px 30px;
+  background: #ff3c3c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+#addMoreBtn:hover {
+  background: #ff1f1f;
+  transform: scale(1.07);
+}
+
+/* VIDEO */
+.video {
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: 80px;
+}

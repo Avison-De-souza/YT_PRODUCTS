@@ -1,0 +1,151 @@
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f9fafc;
+      color: #222;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(219, 217, 215);
+      padding: 15px 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .logo img {
+      height: 35px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      margin-left: 25px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #e62117; /* YouTube red */
+    }
+
+    /* Prime Logo Moving Banner */
+    .prime-banner {
+      width: 100%;
+      overflow: hidden;
+      background: white;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    .prime-track {
+      display: flex;
+      width: calc(250px * 16); /* 8 logos duplicated for infinite loop */
+      animation: scroll 150s linear infinite;
+      border: 3px black double;
+      padding-top: 5px;
+    }
+
+    .prime-track img {
+      height: 60px;
+      margin: 0 50px;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Product Cards */
+    .pro, .pro2 {
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .product, .product2 {
+      background-color: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(119, 113, 113, 0.08);
+      text-align: center;
+      width: 230px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover, .product2:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img, .product2 img {
+      border-radius: 12px;
+    }
+
+    .text p, .text2 p {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 50px;
+      font-size: 0.95rem;
+      color: #000000;
+      border-top: 1px solid #eee;
+    }
+
+    /*  rows 3 and 4 */
+    .prime-collection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .prime-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .product2 {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 330px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product2:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    }
+
+    .text2 p {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #222;
+    }

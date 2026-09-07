@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Products Home</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="stylehome.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo">
+      <h2>YouTuber Products</h2>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" id="homeLink" class="active">Home</a>
+      <a href="about.html" id="aboutLink">About</a>
+      <a href="#shop" class="shop-nav-btn">Shop Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="badge">Exclusive Drops!</span>
+      <h1>YouTuber Product Collection</h1>
+      <p>Get your hands on official Prime Hydration, Feastables Chocolates, and Lunchly merchandise today.</p>
+      <a href="#shop" class="shop-btn">Shop Now</a>
+    </div>
+
+    <div class="hero-img-container">
+      <div class="slideshow-wrapper">
+        <div class="slide fade">
+          <img src="./homeimg/feastableshome.jpg" alt="Feastables Banner">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/8964289.jpg" alt="Prime Hydration">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/lunchlyhome.avif" alt="Lunchly Meals">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/beast.webp" alt="MrBeast Products">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/blue.jpg" alt="Prime Blue Raspberry">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/chand.jpg" alt="Chandler Feastables">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/ksi.jpg" alt="KSI Prime Edition">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/pop.jpg" alt="Special Edition Drops">
+        </div>
+        <div class="slide fade">
+          <img src="./homeimg/white.jpg" alt="Exclusive Merch White">
+        </div>
+
+        <!-- Slideshow Indicators -->
+        <div class="dots-container" id="dotsContainer"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop by Category -->
+  <section id="shop" class="category-section">
+    <div class="section-title">
+      <h2>Shop by Category</h2>
+      <p>Explore exclusive merchandise from your favorite creators</p>
+    </div>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <a href="prime.html">
+          <div class="card-img-wrapper">
+            <img src="./homeimg/8964289.jpg" alt="Prime Drinks">
+          </div>
+          <div class="card-body">
+            <h3>Prime Drinks</h3>
+            <p>Hydration powered by Logan Paul & KSI.</p>
+            <span class="card-link">Explore Prime &rarr;</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="category-card">
+        <a href="feastables.html">
+          <div class="card-img-wrapper">
+            <img src="./homeimg/feastableshome.jpg" alt="Feastables">
+          </div>
+          <div class="card-body">
+            <h3>Feastables</h3>
+            <p>Delicious chocolate bars created by MrBeast.</p>
+            <span class="card-link">Explore Feastables &rarr;</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="category-card">
+        <a href="lunchly.html">
+          <div class="card-img-wrapper">
+            <img src="./homeimg/lunchlyhome.avif" alt="Lunchly Meals">
+          </div>
+          <div class="card-body">
+            <h3>Lunchly Meals</h3>
+            <p>Wholesome and quick YouTuber-inspired meals.</p>
+            <span class="card-link">Explore Lunchly &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 YouTube Products | Created by <strong>Avison</strong></p>
+    </div>
+  </footer>
+
+  <!-- Fixed Script Path -->
+  <script src="slideshowhome.js"></script>
+</body>
+</html>

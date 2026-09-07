@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Products Login</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #b9b9be5f, #858388);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .logo img {
+      width: 120px;
+    }
+
+    .input-group {
+      margin: 1rem 0;
+      text-align: left;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .input-group input:focus {
+      border-color: #4f46e5;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9rem;
+      background: linear-gradient(90deg, #a7a7b5c8, #b8abc5);
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #b3b2bad3, #807c84e3);
+    }
+
+    .error-text {
+      color: red;
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube Logo" />
+      <h1>Products Website</h1>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="input-group">
+        <input type="text" id="email" placeholder="user@gmail.com" />
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" />
+      </div>
+
+      <button type="submit" id="loginBtn">Sign In</button>
+
+      <p id="message" class="error-text"></p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const username = document.getElementById("email");
+    const password = document.getElementById("password");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      message.textContent = "";
+      message.style.color = "red";
+
+      const emailValue = username.value.trim();
+      const passwordValue = password.value.trim();
+      const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+
+      if (emailValue === "" && passwordValue === "") {
+        message.textContent = "Enter email and password";
+      } else if (emailValue === "") {
+        message.textContent = "Enter email";
+      } else if (!emailValue.includes("@gmail.com")) {
+        message.textContent = "Email must contain '@gmail.com'";
+      } else if (passwordValue === "") {
+        message.textContent = "Enter password";
+      } else if (passwordValue.length < 8) {
+        message.textContent = "Password must be at least 8 characters long";
+      } else if (!specialCharPattern.test(passwordValue)) {
+        message.textContent = "Password must include at least one special character";
+      } else {
+        message.style.color = "green";
+        message.textContent = "Login successful! Redirecting...";
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
